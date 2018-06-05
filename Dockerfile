@@ -16,8 +16,7 @@ RUN     native-image  \
 
 RUN     ldd vertx-graalvm-native-image-test-0.0.1-SNAPSHOT
 
-FROM      alpine
-
+FROM      ubuntu:slim
 WORKDIR   /app
 COPY      --from=builder /src/vertx-graalvm-native-image-test-0.0.1-SNAPSHOT /app/vertx
 
